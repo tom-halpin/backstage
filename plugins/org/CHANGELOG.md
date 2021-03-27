@@ -1,5 +1,11 @@
 # @backstage/plugin-org
 
+## 0.3.11
+
+### Patch Changes
+
+- baa39809e: Fixed MembersList showing members from a previous group when navigating to a new group
+
 ## 0.3.10
 
 ### Patch Changes

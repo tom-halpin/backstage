@@ -1,5 +1,34 @@
 # @backstage/plugin-catalog
 
+## 0.5.2
+
+### Patch Changes
+
+- aa58c01e2: Adds a new `EntitySystemDiagramCard` component to visually map all elements in a system.
+
+  To use this new component with the legacy composability pattern, you can add a new tab with the component on to the System Entity Page in your `packages/app/src/components/catalog/EntityPage.tsx` file.
+
+  For example,
+
+  ```diff
+   const SystemEntityPage = ({ entity }: { entity: Entity }) => (
+     <EntityPageLayoutWrapper>
+       <EntityPageLayout.Content
+         path="/*"
+         title="Overview"
+         element={<SystemOverviewContent entity={entity} />}
+       />
+  +    <EntityPageLayout.Content
+  +      path="/diagram/*"
+  +      title="Diagram"
+  +      element={<EntitySystemDiagramCard />}
+  +    />
+     </EntityPageLayoutWrapper>
+   );
+  ```
+
+- 8bee6a131: unify how the owner and lifecycle header labels are made
+
 ## 0.5.1
 
 ### Patch Changes
